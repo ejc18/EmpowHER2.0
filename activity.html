@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Activity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: pink;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .activity-item {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+            margin-bottom: 10px;
+        }
+        .activity-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .timestamp {
+            font-weight: bold;
+            color: #666;
+        }
+        .activity-type {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .activity-details {
+            margin-left: 20px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>User Activity</h1>
+        <div class="activity-item">
+            <div class="timestamp">June 10, 2024 - 10:30 AM</div>
+            <div class="activity-type">Page Visit</div>
+            <div class="activity-details">
+                <p>Visited <a href="#">Educational Support</a> page.</p>
+                <p><strong>Duration:</strong> 5 minutes</p>
+                <p><strong>Device:</strong> Desktop - Chrome</p>
+            </div>
+        </div>
+        <div class="activity-item">
+            <div class="timestamp">June 9, 2024 - 2:15 PM</div>
+            <div class="activity-type">Video Watch</div>
+            <div class="activity-details">
+                <p>Watched video titled "Healthy Living Tips".</p>
+                <p><strong>Duration:</strong> 10 minutes</p>
+                <p><strong>Device:</strong> Mobile - Safari</p>
+            </div>
+        </div>
+        <!-- More activity items can be added here -->
+    </div>
+</body>
+</html>

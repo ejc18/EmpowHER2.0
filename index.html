@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+        }
+        #createAccountForm {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            z-index: 1;
+        }
+        label, input {
+            display: block;
+            margin: 10px auto;
+            width: 80%;
+        }
+        input[type="submit"] {
+            margin-top: 20px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="background-video">
+        <iframe src="https://giphy.com/embed/RY7cgNj0W5PV2sY0tt" frameborder="0" allowfullscreen style="width:100%; height:100%;"></iframe>
+    </div>
+
+    <form id="createAccountForm">
+        <h2>Create an Account</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <input type="submit" value="Create Account">
+    </form>
+
+    <script>
+        // Check if user is already logged in
+        var user = localStorage.getItem('user');
+        if (user) {
+            // Redirect to home page
+            window.location.href = "home.html";
+        }
+
+        // Form submit event listener
+        document.getElementById("createAccountForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Get form data
+            var formData = new FormData(this);
+
+            // Convert form data to JSON
+            var jsonData = {};
+            formData.forEach(function(value, key) {
+                jsonData[key] = value;
+            });
+
+            // Store user data in localStorage
+            localStorage.setItem('user', JSON.stringify(jsonData));
+
+            // Redirect to home page
+            window.location.href = "home.html";
+        });
+    </script>
+</body>
+</html>

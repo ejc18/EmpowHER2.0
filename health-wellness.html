@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8e5e5; /* Light pink background */
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #ff66a3; /* Pink headings */
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #fff; /* White background for sections */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        a {
+            color: #ff66a3; /* Pink links */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff66a3; /* Pink button background */
+            color: #fff; /* White button text */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove underline */
+        }
+
+        .button:hover {
+            background-color: #ff3385; /* Darker pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Health & Wellness</h1>
+    
+    <!-- Community Support -->
+    <section>
+        <h2>Community Support</h2>
+        <p>Welcome to our Health & Wellness community, a supportive space where you can connect with like-minded individuals on a journey to better health. Join our vibrant community to share your experiences, seek advice, and find encouragement.</p>
+        <p>Whether you're looking to share your achievements, ask questions, or simply connect with others who share your goals, our community is here to support you every step of the way.</p>
+        <button class="button" id="chatroom-button">Join the Conversation</button>
+    </section>
+    
+    <!-- Introduction -->
+    <section>
+        <h2>Introduction</h2>
+        <p>Discover the key to a healthier and happier life with our comprehensive Health & Wellness resources. Our mission is to empower you with the knowledge and tools to make positive lifestyle changes that enhance your well-being.</p>
+        <p>Explore our curated collection of articles, tips, and advice to embark on a journey of self-discovery, personal growth, and holistic wellness.</p>
+    </section>
+    
+    <!-- Healthy Eating Tips -->
+    <section>
+        <h2>Healthy Eating Tips</h2>
+        <p>Good nutrition is the cornerstone of good health. Learn how to nourish your body with wholesome foods that provide essential nutrients for optimal health and vitality.</p>
+        <p>Discover practical tips for meal planning, grocery shopping, and preparing nutritious meals that support your health goals. From balanced eating to mindful eating, we'll guide you on your path to better nutrition.</p>
+        <a href="https://www.healthline.com/nutrition/healthy-eating-tips#portion-control" class="button">Click for More Tips</a> <!-- Changed to a button -->
+    </section>
+    
+    <!-- Exercise and Fitness -->
+    <section>
+        <h2>Exercise and Fitness</h2>
+        <p>Moving your body is key to maintaining physical fitness and overall well-being. Explore our exercise and fitness resources to find inspiration, guidance, and motivation for staying active.</p>
+        <p>Whether you're interested in cardio, strength training, yoga, or Pilates, we offer a variety of workouts and training plans to suit every fitness level and preference. Get ready to discover the joy of movement!</p>
+        <a href="https://www.mapmyfitness.com/" class="button">Click this link for custom workouts</a>
+    </section>
+    
+    <!-- Mental Health Tips and Tricks -->
+    <section>
+        <h2>Mental Health Tips and Tricks</h2>
+        <p>True wellness encompasses not only physical health but also mental and emotional well-being. Explore our mental health resources to learn strategies for managing stress, improving resilience, and cultivating inner peace.</p>
+        <p>From mindfulness practices and relaxation techniques to stress-reduction strategies and self-care rituals, we'll help you prioritize your mental health and find balance in your busy life.</p>
+        <a href="https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health" class="button">Mental Health Tips</a>
+    </section>
+    
+    <!-- Link back to the home page -->
+    <p style="text-align: center;"><a href="index.html">Back to Home Page</a></p>
+
+    <!-- JavaScript for handling button click -->
+    <script>
+        document.getElementById("chatroom-button").addEventListener("click", function() {
+            window.location.href = "chatroom.html"; // Redirect to the chatroom page
+        });
+    </script>
+</body>
+</html>

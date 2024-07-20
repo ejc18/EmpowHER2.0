@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300&display=swap">
+    <style>
+        body {
+
+        }
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: pink; /* Set background color */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: pink; /* Set header background color */
+            color: white; /* Set header text color */
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .activity-section {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .recent-activities,
+        .additional-info {
+            width: 45%; /* Set width for each section */
+            background-color: white; /* Set section background color */
+            padding: 20px;
+            border-radius: 10px;
+        }
+        
+        .recent-activities h2,
+        .additional-info h2 {
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .activity-section {
+                flex-direction: column;
+            }
+        
+            .recent-activities,
+            .additional-info {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }

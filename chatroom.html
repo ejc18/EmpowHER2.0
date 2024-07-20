@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Chat Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2; /* Light pink background */
+            margin: 0;
+            padding: 0;
+        }
+
+        #chat-container {
+            width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ff80bf; /* Pink border */
+            border-radius: 10px;
+            background-color: #fff; /* White background */
+        }
+
+        #active-users {
+            margin-bottom: 10px;
+        }
+
+        #chat-messages {
+            height: 300px;
+            overflow-y: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 2px solid #ff80bf; /* Pink border */
+            border-radius: 10px;
+            background-color: #f9f9f9; /* Light gray background */
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            background-color: #ff99cc; /* Lighter pink message background */
+        }
+
+        .user-message {
+            align-self: flex-start;
+        }
+
+        .other-message {
+            align-self: flex-end;
+            background-color: #ffb3d9; /* Lighter pink message background for other users */
+        }
+
+        .message-content {
+            word-wrap: break-word;
+        }
+
+        #input-container {
+            display: flex;
+        }
+
+        #message-input {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #ff80bf; /* Pink border */
+            border-radius: 5px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        #send-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ff80bf; /* Pink send button */
+            color: #fff; /* White button text */
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="active-users">Active Users: <span id="active-users-count">0</span></div>
+        <div id="chat-messages"></div>
+        <div id="input-container">
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            const chatMessages = document.getElementById("chat-messages");
+            const messageInput = document.getElementById("message-input");
+            const sendButton = document.getElementById("send-button");
+            const activeUsersCount = document.getElementById("active-users-count");
+
+            let usersCount = 0;
+
+            sendButton.addEventListener("click", function() {
+                const message = messageInput.value.trim();
+                if (message !== "") {
+                    addMessage("You", message, true);
+                    messageInput.value = "";
+                }
+            });
+
+            function addMessage(sender, message, isUser) {
+                const messageElement = document.createElement("div");
+                messageElement.classList.add("message");
+                messageElement.classList.add(isUser ? "user-message" : "other-message");
+                messageElement.innerHTML = `<strong>${sender}:</strong> <span class="message-content">${message}</span>`;
+                chatMessages.appendChild(messageElement);
+                chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+            }
+
+            // Simulate active users
+            setInterval(function() {
+                usersCount = Math.floor(Math.random() * 10); // Random number of users (0-9)
+                activeUsersCount.textContent = usersCount;
+            }, 3000); // Update every 3 seconds
+        });
+    </script>
+</body>
+</html>
